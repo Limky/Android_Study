@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<LinearLayout android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent" xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView android:id="@+id/textView01"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:textSize="16dp"
+        android:text="AsyncTask를 이용한 백그라운드 작업"
+        android:layout_marginTop="20dp"/>
+
+    <ProgressBar android:id="@+id/progress"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:max="100"
+        style="?android:attr/progressBarStyleHorizontal"/>
+
+
+    <LinearLayout android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <Button android:id="@+id/executeBtn"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="16dp"
+            android:text="실행"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"/>
+
+        <Button android:id="@+id/cancelBtn"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="16dp"
+            android:text="취소"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
