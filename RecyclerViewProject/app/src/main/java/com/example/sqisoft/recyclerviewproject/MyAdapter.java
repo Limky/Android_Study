@@ -14,19 +14,19 @@ import android.widget.ImageView;
 import com.squareup.picasso.Picasso;
 
 import java.io.File;
-import java.util.List;
+import java.util.ArrayList;
 
 /**
  * Created by SQISOFT on 2016-10-05.
  */
 public class MyAdapter extends RecyclerView.Adapter {
 
-    private List<ColorDataItem> dataItems;
+    private ArrayList<ColorDataItem> dataItems;
     private Context context;
     ColorDataItem dataItem;
 
     // Adapter constructor
-    public MyAdapter(List<ColorDataItem> dataItems, Context context) {
+    public MyAdapter(ArrayList<ColorDataItem> dataItems, Context context) {
         this.context = context;
         this.dataItems = dataItems;
     }
@@ -53,6 +53,11 @@ public class MyAdapter extends RecyclerView.Adapter {
                 Log.d("getImagePath","getImagePath = "+ dataItems.get(position).getImagePath());
                 Intent intent = new Intent(context, DetailActivity.class);
                 intent.putExtra("imagePath",dataItems.get(position).getImagePath());
+                intent.putExtra("currentIndex",position);
+
+                intent.putParcelableArrayListExtra("dataItems",dataItems);
+           //     Log.i("테스트","테스트 = "+dataItems.get(1).getImagePath());
+
                 ((Activity) context).startActivity(intent);
                 ((Activity) context).finish();
             }
